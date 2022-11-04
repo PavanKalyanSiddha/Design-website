@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Components/Header";
+import { Container, FirstComponent, Heading, SubHeading } from "./shared/style";
+import DoubleSlash from "../src/Assets/Images/doubleSlash.svg";
+import SecondComponent from "./Components/measureToSuccess/SecondComponent";
+import ThirdComponent from "./Components/industries/ThirdComponent";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <FirstComponent>
+        <img className="doubleSlash" src={DoubleSlash} alt="" />
+
+        <Heading> INNOVATION DIGITAL TECHNOLOGY </Heading>
+        <SubHeading>
+          {" "}
+          everything we do is the consumer, imagination and you.{" "}
+        </SubHeading>
+      </FirstComponent>
+      <SecondComponent />
+      <ThirdComponent/>
+
+    </Container>
   );
-}
+};
 
 export default App;
